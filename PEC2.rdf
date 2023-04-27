@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7/"
+     xml:base="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasBeenMade -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasBeenMade">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Location"/>
+        <rdfs:comment>A wine X was produced in a place Y.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#isReferingTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#isReferingTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Reviews"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <rdfs:comment>An X review is about a Y wine.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Price"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>A wine has a price that is a decimal value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Acidity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Body"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>A vintage is determined by the year of collection.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Acidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Acidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Flavor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Body -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Body">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Flavor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Bottling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Bottling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <rdfs:comment>It refers to the characteristics of the bottling.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Color -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Color">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <rdfs:comment>It refers to the color of the wine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Crianza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Crianza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Dessert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Dessert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Vinification_method"/>
+        <rdfs:comment>Dessert wine are sweet wines</rdfs:comment>
+        <rdfs:comment>SameAs
+https://dbpedia.org/page/Dessert_wine</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Distribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Distribution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <rdfs:comment>It refers to the sale of a wine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Flavor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Flavor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <rdfs:comment>It refers to the characteristics of the flavor of the wine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Fortified -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Fortified">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Vinification_method"/>
+        <rdfs:comment>Fortified wines are often sweeter, and generally more alcoholic wines that have had their fermentation process stopped by the addition of a spirit, or have had additional spirit added after fermentation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <rdfs:comment>It refers to the characteristics of the vintage from which the wine comes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Joven -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Joven">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Location">
+        <rdfs:comment>It refers to the place where the wine was produced.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Others -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Others">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Vinification_method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Price -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Price">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <rdfs:comment>The price of the wine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Red -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Red">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Reserva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Reserva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Reviews -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Reviews">
+        <rdfs:comment>It refers to opinions about a wine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Rose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Rose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Sparkling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Sparkling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Vinification_method"/>
+        <rdfs:comment>Sparkling wines contain carbon dioxide which is produced naturally from fermentation or force-injected later.</rdfs:comment>
+        <rdfs:comment>SameAs
+https://dbpedia.org/page/Sparkling_wine</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Still -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Still">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Vinification_method"/>
+        <rdfs:comment>Still wines are wines that have not gone through the sparkling wine method and have no effervescence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Vinification_method -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Vinification_method">
+        <rdfs:comment>It refers to the method of vinification.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#White -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#White">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasBeenMade"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>sameAs
+https://dbpedia.org/page/Wine</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Arzuaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Arzuaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Location"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Arzuaga"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Location"/>
+        <rdfs:comment>https://www.arzuaganavarro.com/index.php</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Crianza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Crianza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <untitled-ontology-7:hasBeenMade rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Arzuaga"/>
+        <untitled-ontology-7:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.50</untitled-ontology-7:hasPrice>
+        <untitled-ontology-7:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</untitled-ontology-7:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Review-001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Review-001">
+        <untitled-ontology-7:isReferingTo rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Crianza"/>
+        <rdfs:comment>&quot;Good wine&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Semi-Sparkling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Semi-Sparkling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Sparkling"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Semi-Sparkling"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Sparkling"/>
+        <rdfs:comment>(a.k.a. Frizzante, Spritzig, Pétillant, Pearl) a wine with 1–2.5 atmospheres (14.7–37 psi) of pressure that is slightly sparkling.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Fan_d&apos;Oro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Fan_d&apos;Oro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Wine"/>
+        <untitled-ontology-7:hasBeenMade rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Arzuaga"/>
+        <untitled-ontology-7:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</untitled-ontology-7:hasPrice>
+        <untitled-ontology-7:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2010</untitled-ontology-7:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Other"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Red"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Rose"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#White"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasYear"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Crianza"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasYear"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Joven"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Harvest"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#hasYear"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/misae/ontologies/2023/3/untitled-ontology-7#Reserva"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
